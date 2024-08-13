@@ -1,0 +1,191 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F1DEC6; /* Light beige background */
+    color: #333; /* Dark text color for contrast */
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+header {
+    background: linear-gradient(45deg, #FF8343, #F1DEC6); /* Vibrant gradient */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Strong shadow for pop effect */
+    animation: fadeInHeaderText 1s ease-out;
+}
+
+.intro, .profit, .cta {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro {
+    background: linear-gradient(45deg, #179BAE, #4158A6); /* Blue gradient */
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 2s;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    color: #F1DEC6; /* Light color for headings */
+    animation: textGlow 2s infinite alternate;
+}
+
+.profit {
+    background: linear-gradient(45deg, #FF8343, #F1DEC6); /* Orange gradient */
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 2s;
+}
+
+.profit h2 {
+    font-size: 2.5em;
+    color: #F1DEC6; /* Light color for headings */
+    animation: textSlide 2s ease-in-out infinite alternate;
+}
+
+.profit img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    animation: zoomIn 2s;
+}
+
+.cta {
+    background: linear-gradient(45deg, #4158A6, #179BAE); /* Blue gradient */
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Text shadow for contrast */
+    animation: pulse 2s infinite, slideInFromLeft 3s ease-in-out;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    animation: textFlip 2s infinite alternate;
+}
+
+.cta button {
+    background: #F1DEC6; /* Light button background */
+    color: #333; /* Dark text color */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    animation: buttonPulse 2s infinite alternate;
+}
+
+.cta button:hover {
+    background: #BD5B4F; /* Slightly darker on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+footer {
+    background: linear-gradient(45deg, #FF8343, #F1DEC6); /* Orange gradient */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer a {
+    color: #4158A6; /* Dark blue color for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #F1DEC6; /* Light color on hover */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInHeaderText {
+    0% { transform: translateY(-20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes textGlow {
+    0% { text-shadow: 0 0 10px #fff; }
+    100% { text-shadow: 0 0 20px #179BAE; }
+}
+
+@keyframes textSlide {
+    0% { transform: translateX(-20px); }
+    100% { transform: translateX(20px); }
+}
+
+@keyframes textFlip {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(360deg); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .intro h2, .profit h2, .cta h2 {
+        font-size: 1.8em;
+    }
+
+    .intro, .profit, .cta {
+        padding: 20px 10px;
+    }
+
+    .cta button {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}

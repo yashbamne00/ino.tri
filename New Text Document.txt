@@ -1,0 +1,122 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: #292b2c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    animation: fadeIn 2s ease-in;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: slideIn 1s ease-out;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+.intro, .profit, .cta {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.intro {
+    background: #e9ecef;
+    margin: 20px 0;
+    animation: bounceIn 2s;
+}
+
+.intro h2 {
+    font-size: 2em;
+    color: #007bff;
+}
+
+.profit {
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 2s;
+}
+
+.profit h2 {
+    font-size: 2em;
+    color: #28a745;
+}
+
+.profit img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: zoomIn 2s;
+}
+
+.cta {
+    background: #007bff;
+    color: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    animation: pulse 2s infinite;
+}
+
+.cta h2 {
+    font-size: 2em;
+}
+
+footer {
+    background: #292b2c;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
